@@ -1,0 +1,3 @@
+template.cuh
+templateConf.cu
+SequentialMinerv2.hpp

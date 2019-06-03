@@ -1,0 +1,58 @@
+
+ ███▄ ▄███▓ ▄▄▄       ███▄    █   ▄████  ██▀███   ▒█████   ██▒   █▓▓█████
+▓██▒▀█▀ ██▒▒████▄     ██ ▀█   █  ██▒ ▀█▒▓██ ▒ ██▒▒██▒  ██▒▓██░   █▒▓█   ▀
+▓██    ▓██░▒██  ▀█▄  ▓██  ▀█ ██▒▒██░▄▄▄░▓██ ░▄█ ▒▒██░  ██▒ ▓██  █▒░▒███
+▒██    ▒██ ░██▄▄▄▄██ ▓██▒  ▐▌██▒░▓█  ██▓▒██▀▀█▄  ▒██   ██░  ▒██ █░░▒▓█  ▄
+▒██▒   ░██▒ ▓█   ▓██▒▒██░   ▓██░░▒▓███▀▒░██▓ ▒██▒░ ████▓▒░   ▒▀█░  ░▒████▒
+░ ▒░   ░  ░ ▒▒   ▓▒█░░ ▒░   ▒ ▒  ░▒   ▒ ░ ▒▓ ░▒▓░░ ▒░▒░▒░    ░ ▐░  ░░ ▒░ ░
+░  ░      ░  ▒   ▒▒ ░░ ░░   ░ ▒░  ░   ░   ░▒ ░ ▒░  ░ ▒ ▒░    ░ ░░   ░ ░  ░
+░      ░     ░   ▒      ░   ░ ░ ░ ░   ░   ░░   ░ ░ ░ ░ ▒       ░░     ░
+       ░         ░  ░         ░       ░    ░         ░ ░        ░     ░  ░
+                                                               ░
+Usage: Mangrove <TRACE_OPTIONS> -mining=<MINING_TYPE>
+                              [ <Computation_type> ]
+                              [ -read=<READ_OPTIONS> ]
+                              [ -varfile <var_file> ]
+                              [ -check-results ]
+                              [ -check-reads ]
+                              [ -overlap ]
+                              [ -output <file_name> ]
+
+    <TRACE_OPTIONS>
+
+        -T <trace_file>                     Read trace from file
+
+        -G <num_of_vars> <size> [-random]   Generate trace of size <size> (default: 5000000)
+                                                [-random] random trace (default: constant trace)
+            [-range [<start>-<end>[,...]]]      [-range] interval sequence
+
+    -mining=<MINING_TYPE>
+
+        bool                                Boolean Mining
+
+        numeric                             Numeric Mining
+
+    <Computation_type>
+
+        -S                                  Sequential Mining (1 thread) (default)
+
+        -M                                  Multi-Threads Mining
+
+        -GPU                                GPU Mining
+
+    -varfile <var_file>                     Variable names file associated to the trace
+
+    -check-results                          check unary and binary GPU results with sequential mining
+
+    -read=<READ_OPTIONS>
+
+        MMAP                                MemoryMapped Parsing
+
+        GPU                                 GPU Accelerated Parsing
+
+    -check-read                             check reading of MMAP e GPU with iostream
+
+    -overlap                                read or generate and overlap data transfer to the GPU
+
+    -output <file_name>                     print invariants to <file_name>
+

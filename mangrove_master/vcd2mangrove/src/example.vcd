@@ -1,0 +1,74 @@
+$date
+     Sep 15, 2014       13:49:41
+$end
+
+$version
+              SystemC 2.3.0-ASI --- Jan 21 2013 09:04:20
+$end
+
+$timescale
+     1 ps
+$end
+
+$scope module SystemC $end
+$var wire    1  aaa  clock       $end
+$var wire    1  aab  reset       $end
+$var wire    1  aac  request1       $end
+$var wire    1  aad  request2       $end
+$var wire    1  aae  request3       $end
+$var wire    1  aaf  request4       $end
+$var wire    4  aaaag  grant_o [3:0]  $end
+$upscope $end
+$enddefinitions  $end
+
+$comment
+All initial values are dumped below at time 0 sec = 0 timescale units.
+$end
+
+$dumpvars
+1aaa
+1aab
+0aac
+0aad
+0aae
+0aaf
+b0 aaaag
+$end
+
+#500000000
+0aaa
+
+#1000000000
+1aaa
+0aab
+1aac
+1aad
+1aae
+
+#1500000000
+0aaa
+
+#2000000000
+1aaa
+0aad
+1aaf
+b10 aaaag
+
+#2500000000
+0aaa
+
+#3000000000
+1aaa
+0aac
+1aad
+
+#3500000000
+0aaa
+
+#4000000000
+1aaa
+1aac
+0aad
+0aaf
+b100 aaaag
+
