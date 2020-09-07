@@ -1,0 +1,22 @@
+
+# clang static analyser
+
+scan-build -v make
+
+# cyclomatic complexity
+
+lyzard -V
+
+# Code lines
+
+cloc [ --by-file ] .
+
+grep -w -l -r | xarg sed -i s/$1/$2/g
+
+# -w whole word
+# -l show filename
+# -r recursive
+
+# -i modify the file
+# s/ substitute
+# /g all occurences in lines 

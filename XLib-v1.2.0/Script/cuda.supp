@@ -1,0 +1,45 @@
+
+{
+   CUDA1
+   Memcheck:Leak
+   match-leak-kinds: possible
+   ...
+   obj:/usr/lib/x86_64-linux-gnu/libcuda.so.352.39
+   ...
+}
+
+{
+   CUDA2
+   Memcheck:Leak
+   match-leak-kinds: possible
+   ...
+   obj:/usr/local/cuda-7.5/lib64/libcudart.so.7.5.18
+   ...
+}
+
+{
+   CUDA3
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   ...
+   obj:/usr/lib/x86_64-linux-gnu/libcuda.so.352.39
+   ...
+}
+
+{
+   CUDA4
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   ...
+   obj:/usr/local/cuda-7.5/lib64/libcudart.so.7.5.18
+   ...
+}
+
+{
+   CUDA5
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   ...
+   fun:*cudart*
+   ...
+}

@@ -6,7 +6,7 @@ FIND_PACKAGE(CUDA)
 
 # ------------------------------------------------------------------------------
 
-set(XLIB_DIR    ${PROJECT_SOURCE_DIR}/../XLib-v1.2)
+set(XLIB_DIR    ${PROJECT_SOURCE_DIR}/../XLib-v1.2.0)
 
 if (NOT EXISTS "${XLIB_DIR}")
     message(FATAL_ERROR "\nXLib not found : ${XLIB_DIR}")
